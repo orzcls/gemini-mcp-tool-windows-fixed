@@ -99,7 +99,7 @@ npm install -g gemini-mcp-tool-windows-fixed@1.0.2
       "command": "npx",
       "args": [
         "-y",
-        "gemini-mcp-tool-windows-fixed"
+        "gemini-mcp-tool-windows-fixed@1.0.2"
       ],
       "env": {
         "GEMINI_API_KEY": "YOUR_ACTUAL_API_KEY_HERE"
@@ -121,7 +121,7 @@ npm install -g gemini-mcp-tool-windows-fixed@1.0.2
   "mcpServers": {
     "gemini-cli": {
       "command": "npx",
-      "args": ["-y", "gemini-mcp-tool-windows-fixed"],
+      "args": ["-y", "gemini-mcp-tool-windows-fixed@1.0.2"],
       "env": {
         "GEMINI_API_KEY": "YOUR_ACTUAL_API_KEY_HERE"
       }
