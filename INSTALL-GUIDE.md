@@ -1,5 +1,21 @@
 # 🚀 Gemini MCP Tool - Windows Fixed Version Installation Guide
 
+> **最新版本 v1.0.2** - 修复了 PowerShell 执行错误，解决了 `spawn powershell.exe ENOENT` 问题
+
+## 🆕 版本更新日志
+
+### v1.0.2 (最新)
+- ✅ **修复 PowerShell 执行错误** - 解决 `spawn powershell.exe ENOENT` 问题
+- ✅ **改进 Windows 兼容性** - 自动检测可用的 PowerShell 版本
+- ✅ **修复未定义变量错误** - 修复 `executeCommandWithPipedInput` 函数中的 `args` 变量问题
+- ✅ **增强错误处理** - 更好的错误信息和调试输出
+
+### v1.0.1
+- 基础 Windows 兼容性修复
+
+### v1.0.0
+- 初始版本
+
 ## 📋 Prerequisites
 
 1. **Node.js** (v16.0.0 or higher)
@@ -26,18 +42,36 @@
 ### Method 1: NPX (Recommended)
 
 ```powershell
-# Test the tool
-npx -y gemini-mcp-tool-windows-fixed
+# 使用最新版本 (推荐)
+npx gemini-mcp-tool-windows-fixed@1.0.2
+
+# 或者使用最新版本标签
+npx -y gemini-mcp-tool-windows-fixed@latest
 ```
 
 ### Method 2: Global Installation
 
 ```powershell
-# Install globally
-npm install -g gemini-mcp-tool-windows-fixed
+# 安装最新版本
+npm install -g gemini-mcp-tool-windows-fixed@1.0.2
 
-# Test the tool
+# 测试工具
 gemini-mcp-tool-windows-fixed
+```
+
+### Method 3: 更新现有安装
+
+如果您之前安装了旧版本，请先更新：
+
+```powershell
+# 卸载旧版本
+npm uninstall -g gemini-mcp-tool-windows-fixed
+
+# 清除缓存
+npm cache clean --force
+
+# 安装最新版本
+npm install -g gemini-mcp-tool-windows-fixed@1.0.2
 ```
 
 ## ⚙️ MCP Client Configuration
@@ -173,8 +207,33 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 npm cache clean --force
 
 # Reinstall
-npm install -g gemini-mcp-tool-windows-fixed
+npm install -g gemini-mcp-tool-windows-fixed@1.0.2
 ```
+
+#### 5. "spawn powershell.exe ENOENT" 错误
+
+这个错误在 v1.0.2 中已修复。如果仍然遇到此错误：
+
+```powershell
+# 确保使用最新版本
+npm uninstall -g gemini-mcp-tool-windows-fixed
+npm cache clean --force
+npm install -g gemini-mcp-tool-windows-fixed@1.0.2
+
+# 或使用 npx
+npx gemini-mcp-tool-windows-fixed@1.0.2
+```
+
+**原因：** 旧版本 (v1.0.0, v1.0.1) 存在 PowerShell 执行路径问题
+**解决方案：** 更新到 v1.0.2 或更高版本
+
+#### 6. PowerShell 版本兼容性
+
+工具会自动检测可用的 PowerShell 版本：
+- Windows PowerShell (powershell.exe)
+- PowerShell Core (pwsh)
+
+如果遇到问题，请确保至少安装了其中一个版本。
 
 ### Debug Mode
 

@@ -3,9 +3,18 @@
 [![npm version](https://badge.fury.io/js/gemini-mcp-tool-windows-fixed.svg)](https://badge.fury.io/js/gemini-mcp-tool-windows-fixed)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+> **最新版本 v1.0.2** - 修复了 PowerShell 执行错误，解决了 `spawn powershell.exe ENOENT` 问题
+
 A **Windows-compatible** Model Context Protocol (MCP) server that enables AI assistants to interact with Google's Gemini CLI. This is a fixed version specifically designed to work seamlessly on Windows environments with PowerShell support.
 
 > **Note**: This is an enhanced version of the [original gemini-mcp-tool](https://github.com/jamubc/gemini-mcp-tool) with Windows-specific fixes and improvements.
+
+## 🆕 最新更新 (v1.0.2)
+
+- ✅ **修复 PowerShell 执行错误** - 解决 `spawn powershell.exe ENOENT` 问题
+- ✅ **改进 Windows 兼容性** - 自动检测可用的 PowerShell 版本
+- ✅ **修复未定义变量错误** - 修复 `executeCommandWithPipedInput` 函数中的 `args` 变量问题
+- ✅ **增强错误处理** - 更好的错误信息和调试输出
 
 ## ✨ Features
 
@@ -45,18 +54,32 @@ This Windows-fixed version resolves:
 ### Quick Start with NPX (Recommended)
 
 ```powershell
-# Test the tool immediately
-npx -y gemini-mcp-tool-windows-fixed
+# 使用最新版本 (推荐)
+npx gemini-mcp-tool-windows-fixed@1.0.2
+
+# 或者使用最新版本标签
+npx -y gemini-mcp-tool-windows-fixed@latest
 ```
 
 ### Global Installation
 
 ```powershell
-# Install globally
-npm install -g gemini-mcp-tool-windows-fixed
+# 安装最新版本
+npm install -g gemini-mcp-tool-windows-fixed@1.0.2
 
-# Run the tool
+# 运行工具
 gemini-mcp-tool-windows-fixed
+```
+
+### 更新现有安装
+
+如果您之前安装了旧版本：
+
+```powershell
+# 卸载旧版本并安装最新版本
+npm uninstall -g gemini-mcp-tool-windows-fixed
+npm cache clean --force
+npm install -g gemini-mcp-tool-windows-fixed@1.0.2
 ```
 
 ## ⚙️ MCP Client Configuration
