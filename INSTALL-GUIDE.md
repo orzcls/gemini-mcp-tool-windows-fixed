@@ -76,6 +76,25 @@ npm install -g gemini-mcp-tool-windows-fixed@1.0.2
 
 ## ⚙️ MCP Client Configuration
 
+### For Claude Code (One-Line Setup)
+
+```bash
+# One-command setup for Claude Code
+claude mcp add gemini-cli -- npx -y gemini-mcp-tool-windows-fixed@1.0.2
+```
+
+**Verify Installation:**
+Type `/mcp` inside Claude Code to verify the `gemini-cli` MCP is active. <mcreference link="https://github.com/jamubc/gemini-mcp-tool" index="1">1</mcreference>
+
+### Alternative: Import from Claude Desktop
+If you already have it configured in Claude Desktop:
+
+1. Add to your Claude Desktop config (see below)
+2. Import to Claude Code:
+   ```bash
+   claude mcp add-from-claude-desktop
+   ```
+
 ### For Trae AI
 
 1. Open: `%APPDATA%\Trae\User\mcp.json`
@@ -258,6 +277,44 @@ If you encounter issues:
    - PowerShell version
    - Node.js version
    - Complete error logs
+
+## 🎯 Usage Examples
+
+### Natural Language Examples <mcreference link="https://github.com/jamubc/gemini-mcp-tool" index="2">2</mcreference>
+
+**With File References (using @ syntax):**
+- "ask gemini to analyze @src/main.js and explain what it does"
+- "use gemini to summarize @. the current directory"
+- "analyze @package.json and tell me about dependencies"
+
+**General Questions (without files):**
+- "ask gemini to search for the latest tech news"
+- "use gemini to explain div centering"
+- "ask gemini about best practices for React development related to @file_im_confused_about"
+- "use gemini to explain index.html"
+- "understand the massive project using gemini"
+- "ask gemini to search for latest news"
+
+**Using Gemini CLI's Sandbox Mode (-s):** <mcreference link="https://github.com/jamubc/gemini-mcp-tool" index="2">2</mcreference>
+The sandbox mode allows you to safely test code changes, run scripts, or execute potentially risky operations in an isolated environment.
+- "use gemini sandbox to create and run a Python script that processes data"
+- "ask gemini to safely test @script.py and explain what it does"
+- "use gemini sandbox to install numpy and create a data visualization"
+- "test this code safely: Create a script that makes HTTP requests to an API"
+
+### Slash Commands (for Claude Code Users) <mcreference link="https://github.com/jamubc/gemini-mcp-tool" index="2">2</mcreference>
+
+You can use these commands directly in Claude Code's interface (compatibility with other clients has not been tested):
+
+- **/analyze**: Analyzes files or directories using Gemini, or asks general questions
+  - `prompt` (required): The analysis prompt. Use @ syntax to include files (e.g., `/analyze prompt:@src/ summarize this directory`) or ask general questions (e.g., `/analyze prompt:Please use a web search to find the latest news stories`)
+
+- **/sandbox**: Safely tests code or scripts in Gemini's sandbox environment
+  - `prompt` (required): Code testing request (e.g., `/sandbox prompt:Create and run a Python script that processes CSV data` or `/sandbox prompt:@script.py Test this script safely`)
+
+- **/help**: Displays the Gemini CLI help information
+- **/ping**: Tests the connection to the server
+  - `message` (optional): A message to echo back
 
 ## 🎉 Success!
 
