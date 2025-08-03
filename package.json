@@ -1,0 +1,51 @@
+{
+  "name": "gemini-mcp-tool-windows-fixed",
+  "version": "1.0.1",
+  "type": "module",
+  "description": "Windows-compatible MCP server that enables AI assistants to interact with Google Gemini CLI - Fixed version for Windows environments",
+  "main": "index.js",
+  "bin": {
+    "gemini-mcp": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test-fixed-mcp.js",
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gemini",
+    "google-gemini",
+    "ai",
+    "claude",
+    "cli",
+    "windows",
+    "powershell",
+    "fixed"
+  ],
+  "author": "Windows Fixed Version",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/gemini-mcp-tool-windows-fixed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/gemini-mcp-tool-windows-fixed/issues"
+  },
+  "homepage": "https://github.com/your-username/gemini-mcp-tool-windows-fixed#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.1",
+    "dotenv": "^17.2.1"
+  },
+  "devDependencies": {},
+  "files": [
+    "index.js",
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ]
+}
