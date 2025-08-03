@@ -124,7 +124,7 @@ If you already have it configured in Claude Desktop:
         "GEMINI_API_KEY": "YOUR_ACTUAL_API_KEY_HERE"
       },
       "isActive": true,
-      "providerUrl": "https://github.com/your-username/gemini-mcp-tool-windows-fixed"
+      "providerUrl": "https://github.com/orzcls/gemini-mcp-tool-windows-fixed"
     }
   }
 }
@@ -409,3 +409,4 @@ If you encounter any issues or have questions:
 **Made with ❤️ for Windows developers**
 
 **Note**: This is a Windows-optimized fork of the original gemini-mcp-tool. For other platforms, consider using the [original version](https://github.com/jamubc/gemini-mcp-tool).
+
