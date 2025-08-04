@@ -81,7 +81,7 @@ gemini-mcp-tool-windows-fixed
 # 卸载旧版本并安装最新版本
 npm uninstall -g gemini-mcp-tool-windows-fixed
 npm cache clean --force
-npm install -g gemini-mcp-tool-windows-fixed@1.0.2
+npm install -g gemini-mcp-tool-windows-fixed@1.0.3
 ```
 
 ## ⚙️ MCP Client Configuration

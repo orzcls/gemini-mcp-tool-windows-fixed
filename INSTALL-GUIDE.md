@@ -276,12 +276,12 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 npm cache clean --force
 
 # Reinstall
-npm install -g gemini-mcp-tool-windows-fixed@1.0.2
+npm install -g gemini-mcp-tool-windows-fixed@1.0.3
 ```
 
 #### 5. "spawn powershell.exe ENOENT" 错误
 
-这个错误在 v1.0.2 中已修复。如果仍然遇到此错误：
+这个错误在 v1.0.3 中已修复。如果仍然遇到此错误：
 
 ```powershell
 # 确保使用最新版本
@@ -290,7 +290,7 @@ npm cache clean --force
 npm install -g gemini-mcp-tool-windows-fixed@1.0.2
 
 # 或使用 npx
-npx gemini-mcp-tool-windows-fixed@1.0.2
+npx gemini-mcp-tool-windows-fixed@1.0.3
 ```
 
 **原因：** 旧版本 (v1.0.0, v1.0.1) 存在 PowerShell 执行路径问题
