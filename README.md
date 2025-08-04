@@ -147,28 +147,6 @@ If you already have it configured in Claude Desktop:
         "GEMINI_API_KEY": "YOUR_ACTUAL_API_KEY_HERE"
       }
     }
-  },
-  "_comments": {
-    "powershell_path_support": "v1.0.3 新增 PowerShell 路径参数支持",
-    "usage_examples": {
-      "brainstorm_with_custom_powershell": {
-        "topic": "你的主题",
-        "count": 5,
-        "powershellPath": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
-      },
-      "ask_gemini_with_custom_powershell": {
-        "prompt": "你的问题",
-        "model": "gemini-pro",
-        "powershellPath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
-      }
-    },
-    "common_powershell_paths": [
-      "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe (Windows PowerShell 5.x)",
-      "C:\\Program Files\\PowerShell\\7\\pwsh.exe (PowerShell 7.x)",
-      "powershell.exe (系统PATH中的默认PowerShell)",
-      "pwsh.exe (系统PATH中的PowerShell 7.x)"
-    ],
-    "backward_compatibility": "powershellPath 参数是可选的，不提供时使用系统默认PowerShell"
   }
 }
 ```
