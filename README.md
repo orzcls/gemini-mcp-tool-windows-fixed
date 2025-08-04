@@ -14,7 +14,7 @@ A **Windows-compatible** Model Context Protocol (MCP) server that enables AI ass
 - 🔧 **修复跨终端兼容性** - 解决了在不同终端环境中Node.js路径找不到的问题
 - 📦 **修复fetch-chunk格式错误** - 修复了分段响应的MCP协议格式不匹配问题
 - 🛡️ **增强PATH环境变量处理** - 自动添加常见Node.js安装路径
-- ✅ **完全兼容所有终端** - 支持PowerShell、CMD、VS Code终端、Trae AI等
+- ✅ **完全兼容所有终端** - 支持PowerShell、CMD、VS Code终端、Trae AI、CherryStudio等
 - 🚀 **改进错误处理** - 更好的错误信息和调试输出
 
 ### v1.0.3 更新
@@ -41,6 +41,12 @@ This Windows-fixed version resolves:
 - Character encoding problems with Chinese/Unicode text
 - Command line argument escaping on Windows
 - Environment variable handling
+  
+## Prerequisites
+Before using this tool, ensure you have:
+
+Node.js (v16.0.0 or higher)
+Google Gemini CLI installed and configured
 
 ## 📋 Prerequisites
 
@@ -392,5 +398,6 @@ If you encounter any issues or have questions:
 **Made with ❤️ for Windows developers**
 
 **Note**: This is a Windows-optimized fork of the original gemini-mcp-tool. For other platforms, consider using the [original version](https://github.com/jamubc/gemini-mcp-tool).
+
 
 
