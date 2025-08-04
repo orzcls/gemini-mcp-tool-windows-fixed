@@ -83,8 +83,58 @@ npm install -g gemini-mcp-tool-windows-fixed@1.0.2
 claude mcp add gemini-cli -- npx -y gemini-mcp-tool-windows-fixed@1.0.2
 ```
 
+### For Development/Testing (Local Version)
+
+如果你想使用本地开发版本进行测试，可以使用以下配置：
+
+1. 首先确保你已经克隆了项目到本地
+2. 使用提供的 `gemini-cli-test.json` 配置文件：
+
+```json
+{
+  "mcpServers": {
+    "gemini-cli-test": {
+      "command": "node",
+      "args": ["D:\\gemini\\lib\\fixed-mcp-tool.js"],
+      "env": {
+        "GEMINI_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
+**注意：** 请将路径 `D:\\gemini\\lib\\fixed-mcp-tool.js` 替换为你的实际项目路径。
+
 **Verify Installation:**
 Type `/mcp` inside Claude Code to verify the `gemini-cli` MCP is active. <mcreference link="https://github.com/jamubc/gemini-mcp-tool" index="1">1</mcreference>
+
+### PowerShell Path Configuration (Optional)
+
+如果你的系统中 PowerShell 路径不在标准位置，或者你想使用特定版本的 PowerShell，可以在调用工具时指定 `powershellPath` 参数：
+
+**ask-gemini 工具示例：**
+```json
+{
+  "prompt": "你的问题",
+  "model": "gemini-pro",
+  "powershellPath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+}
+```
+
+**brainstorm 工具示例：**
+```json
+{
+  "topic": "你的主题",
+  "count": 5,
+  "powershellPath": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+}
+```
+
+**常见 PowerShell 路径：**
+- Windows PowerShell 5.1: `C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
+- PowerShell 7+: `C:\\Program Files\\PowerShell\\7\\pwsh.exe`
+- 如果不指定此参数，系统会自动检测可用的 PowerShell 版本
 
 ### Alternative: Import from Claude Desktop
 If you already have it configured in Claude Desktop:
