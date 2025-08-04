@@ -42,14 +42,12 @@ This Windows-fixed version resolves:
 - Command line argument escaping on Windows
 - Environment variable handling
   
-## Prerequisites
+## 📋 Prerequisites
 
 Before using this tool, ensure you have:
 
 1. **[Node.js](https://nodejs.org/)** (v16.0.0 or higher)
 2. **[Google Gemini CLI](https://github.com/google-gemini/gemini-cli)** installed and configured
-
-## 📋 Prerequisites
 
 1. **Node.js** (v16.0.0 or higher)
    ```powershell
@@ -399,5 +397,6 @@ If you encounter any issues or have questions:
 **Made with ❤️ for Windows developers**
 
 **Note**: This is a Windows-optimized fork of the original gemini-mcp-tool. For other platforms, consider using the [original version](https://github.com/jamubc/gemini-mcp-tool).
+
 
 
