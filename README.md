@@ -124,7 +124,7 @@ If you already have it configured in Claude Desktop:
         "GEMINI_API_KEY": "YOUR_ACTUAL_API_KEY_HERE"
       },
       "isActive": true,
-      "providerUrl": "https://github.com/your-username/gemini-mcp-tool-windows-fixed"
+      "providerUrl": "https://github.com/orzcls/gemini-mcp-tool-windows-fixed"
     }
   }
 }
@@ -228,7 +228,7 @@ Test connection to the server.
 ### 6. `Help`
 Display help information about available tools.
 
-## 🎯 Usage
+## 🎯 Usage Examples
 
 Once configured, you can use the following tools through your MCP client:
 
@@ -284,33 +284,6 @@ You can use these commands directly in Claude Code's interface (compatibility wi
   ```
   "Run this Python code in sandbox mode: print('Hello World')"
   ```
-
-## 📝 Examples
-
-### Basic Prompts
-```
-"What are the best practices for Node.js development?"
-"Explain the differences between async/await and Promises"
-```
-
-### File Analysis
-```
-"Analyze @package.json and suggest improvements"
-"Review @src/index.js for potential security issues"
-"Compare @old-config.json with @new-config.json"
-```
-
-### Code Execution
-```
-"Run this Python code in sandbox mode: print('Hello World')"
-"Execute this JavaScript: console.log(new Date())"
-```
-
-### Complex Analysis
-```
-"Analyze the entire codebase and suggest architectural improvements"
-"Review all TypeScript files for type safety issues"
-```
 
 ## 🔧 Windows-Specific Fixes
 
@@ -409,3 +382,5 @@ If you encounter any issues or have questions:
 **Made with ❤️ for Windows developers**
 
 **Note**: This is a Windows-optimized fork of the original gemini-mcp-tool. For other platforms, consider using the [original version](https://github.com/jamubc/gemini-mcp-tool).
+
+
