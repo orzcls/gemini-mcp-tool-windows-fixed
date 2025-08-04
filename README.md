@@ -3,29 +3,28 @@
 [![npm version](https://badge.fury.io/js/gemini-mcp-tool-windows-fixed.svg)](https://badge.fury.io/js/gemini-mcp-tool-windows-fixed)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **最新版本 v1.0.21** - 修复了跨终端兼容性问题和fetch-chunk格式错误
+> **Latest Version v1.0.21** - Fixed cross-terminal compatibility issues and fetch-chunk format errors
 
 A **Windows-compatible** Model Context Protocol (MCP) server that enables AI assistants to interact with Google's Gemini CLI. This is a fixed version specifically designed to work seamlessly on Windows environments with PowerShell support.
 
 > **Note**: This is an enhanced version of the [original gemini-mcp-tool](https://github.com/jamubc/gemini-mcp-tool) with Windows-specific fixes and improvements.
 
-## 🆕 最新更新 (v1.0.21)
+## 🆕 Latest Updates (v1.0.21)
 
-- 🔧 **修复跨终端兼容性** - 解决了在不同终端环境中Node.js路径找不到的问题
-- 📦 **修复fetch-chunk格式错误** - 修复了分段响应的MCP协议格式不匹配问题
-- 🛡️ **增强PATH环境变量处理** - 自动添加常见Node.js安装路径
-- ✅ **完全兼容所有终端** - 支持PowerShell、CMD、VS Code终端、Trae AI、CherryStudio等
-- 🚀 **改进错误处理** - 更好的错误信息和调试输出
+- 🔧 **Fixed Cross-Terminal Compatibility** - Resolved Node.js path not found issues in different terminal environments
+- 📦 **Fixed fetch-chunk Format Error** - Fixed MCP protocol format mismatch in chunked responses
+- 🛡️ **Enhanced PATH Environment Variable Handling** - Automatically adds common Node.js installation paths
+- ✅ **Full Compatibility with All Terminals** - Supports PowerShell, CMD, VS Code Terminal, Trae AI, CherryStudio, etc.
+- 🚀 **Improved Error Handling** - Better error messages and debug output
 
-### v1.0.3 更新
+### v1.0.3 Updates
 
-- 🆕 **PowerShell 路径参数支持** - 添加可选的 `powershellPath` 参数，允许用户自定义 PowerShell 可执行文件路径
-- ✅ **修复 PowerShell 执行错误** - 解决 `spawn powershell.exe ENOENT` 问题
-- ✅ **改进 Windows 兼容性** - 自动检测可用的 PowerShell 版本
-- ✅ **修复未定义变量错误** - 修复 `executeCommandWithPipedInput` 函数中的 `args` 变量问题
-- ✅ **增强错误处理** - 更好的错误信息和调试输出
-- ✅ **向后兼容** - 现有配置无需修改，自动使用默认检测逻辑
---- 
+- 🆕 **PowerShell Path Parameter Support** - Added optional `powershellPath` parameter allowing users to customize PowerShell executable path
+- ✅ **Fixed PowerShell Execution Error** - Resolved `spawn powershell.exe ENOENT` issue
+- ✅ **Improved Windows Compatibility** - Automatic detection of available PowerShell versions
+- ✅ **Fixed Undefined Variable Error** - Fixed `args` variable issue in `executeCommandWithPipedInput` function
+- ✅ **Enhanced Error Handling** - Better error messages and debug output
+- ✅ **Backward Compatibility** - Existing configurations require no modification, automatically uses default detection logic
 
 ## ✨ Features
 
@@ -72,32 +71,32 @@ Before using this tool, ensure you have:
 ### Quick Start with NPX (Recommended)
 
 ```powershell
-# 使用最新版本 (推荐)
-npx gemini-mcp-tool-windows-fixed@1.0.4
+# Use latest version (recommended)
+npx gemini-mcp-tool-windows-fixed@1.0.21
 
-# 或者使用最新版本标签
+# Or use latest version tag
 npx -y gemini-mcp-tool-windows-fixed@latest
 ```
 
 ### Global Installation
 
 ```powershell
-# 安装最新版本
-npm install -g gemini-mcp-tool-windows-fixed@1.0.4
+# Install latest version
+npm install -g gemini-mcp-tool-windows-fixed@1.0.21
 
-# 运行工具
+# Run the tool
 gemini-mcp-tool-windows-fixed
 ```
 
-### 更新现有安装
+### Updating Existing Installation
 
-如果您之前安装了旧版本：
+If you previously installed an older version:
 
 ```powershell
-# 卸载旧版本并安装最新版本
+# Uninstall old version and install latest
 npm uninstall -g gemini-mcp-tool-windows-fixed
 npm cache clean --force
-npm install -g gemini-mcp-tool-windows-fixed@1.0.3
+npm install -g gemini-mcp-tool-windows-fixed@1.0.21
 ```
 
 ## ⚙️ MCP Client Configuration
@@ -400,7 +399,5 @@ If you encounter any issues or have questions:
 **Made with ❤️ for Windows developers**
 
 **Note**: This is a Windows-optimized fork of the original gemini-mcp-tool. For other platforms, consider using the [original version](https://github.com/jamubc/gemini-mcp-tool).
-
-
 
 
