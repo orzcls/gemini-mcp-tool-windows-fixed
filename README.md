@@ -25,6 +25,7 @@ A **Windows-compatible** Model Context Protocol (MCP) server that enables AI ass
 - ✅ **修复未定义变量错误** - 修复 `executeCommandWithPipedInput` 函数中的 `args` 变量问题
 - ✅ **增强错误处理** - 更好的错误信息和调试输出
 - ✅ **向后兼容** - 现有配置无需修改，自动使用默认检测逻辑
+--- 
 
 ## ✨ Features
 
@@ -43,10 +44,11 @@ This Windows-fixed version resolves:
 - Environment variable handling
   
 ## Prerequisites
+
 Before using this tool, ensure you have:
 
-Node.js (v16.0.0 or higher)
-Google Gemini CLI installed and configured
+1. **[Node.js](https://nodejs.org/)** (v16.0.0 or higher)
+2. **[Google Gemini CLI](https://github.com/google-gemini/gemini-cli)** installed and configured
 
 ## 📋 Prerequisites
 
@@ -398,6 +400,7 @@ If you encounter any issues or have questions:
 **Made with ❤️ for Windows developers**
 
 **Note**: This is a Windows-optimized fork of the original gemini-mcp-tool. For other platforms, consider using the [original version](https://github.com/jamubc/gemini-mcp-tool).
+
 
 
 
