@@ -1,10 +1,10 @@
 # 🚀 Gemini MCP Tool - Windows Fixed Version Installation Guide
 
-> **最新版本 v1.0.2** - 修复了 PowerShell 执行错误，解决了 `spawn powershell.exe ENOENT` 问题
+> **最新版本 v1.0.3** - 添加了 PowerShell 路径参数支持，允许用户自定义 PowerShell 可执行文件路径
 
 ## 🆕 版本更新日志
 
-### v1.0.2 (最新)
+### v1.0.3 (最新)
 - ✅ **修复 PowerShell 执行错误** - 解决 `spawn powershell.exe ENOENT` 问题
 - ✅ **改进 Windows 兼容性** - 自动检测可用的 PowerShell 版本
 - ✅ **修复未定义变量错误** - 修复 `executeCommandWithPipedInput` 函数中的 `args` 变量问题
@@ -43,7 +43,7 @@
 
 ```powershell
 # 使用最新版本 (推荐)
-npx gemini-mcp-tool-windows-fixed@1.0.2
+npx gemini-mcp-tool-windows-fixed@1.0.3
 
 # 或者使用最新版本标签
 npx -y gemini-mcp-tool-windows-fixed@latest
@@ -53,7 +53,7 @@ npx -y gemini-mcp-tool-windows-fixed@latest
 
 ```powershell
 # 安装最新版本
-npm install -g gemini-mcp-tool-windows-fixed@1.0.2
+npm install -g gemini-mcp-tool-windows-fixed@1.0.3
 
 # 测试工具
 gemini-mcp-tool-windows-fixed
@@ -71,7 +71,7 @@ npm uninstall -g gemini-mcp-tool-windows-fixed
 npm cache clean --force
 
 # 安装最新版本
-npm install -g gemini-mcp-tool-windows-fixed@1.0.2
+npm install -g gemini-mcp-tool-windows-fixed@1.0.3
 ```
 
 ## ⚙️ MCP Client Configuration
@@ -80,7 +80,7 @@ npm install -g gemini-mcp-tool-windows-fixed@1.0.2
 
 ```bash
 # One-command setup for Claude Code
-claude mcp add gemini-cli -- npx -y gemini-mcp-tool-windows-fixed@1.0.2
+claude mcp add gemini-cli -- npx -y gemini-mcp-tool-windows-fixed@1.0.3
 ```
 
 ### For Development/Testing (Local Version)
@@ -160,7 +160,7 @@ If you already have it configured in Claude Desktop:
       "command": "npx",
       "args": [
         "-y",
-        "gemini-mcp-tool-windows-fixed@1.0.2"
+        "gemini-mcp-tool-windows-fixed@1.0.3"
       ],
       "env": {
         "GEMINI_API_KEY": "YOUR_ACTUAL_API_KEY_HERE"
@@ -182,7 +182,7 @@ If you already have it configured in Claude Desktop:
   "mcpServers": {
     "gemini-cli": {
       "command": "npx",
-      "args": ["-y", "gemini-mcp-tool-windows-fixed@1.0.2"],
+      "args": ["-y", "gemini-mcp-tool-windows-fixed@1.0.3"],
       "env": {
         "GEMINI_API_KEY": "YOUR_ACTUAL_API_KEY_HERE"
       }
@@ -294,7 +294,7 @@ npx gemini-mcp-tool-windows-fixed@1.0.2
 ```
 
 **原因：** 旧版本 (v1.0.0, v1.0.1) 存在 PowerShell 执行路径问题
-**解决方案：** 更新到 v1.0.2 或更高版本
+**解决方案：** 更新到 v1.0.3 或更高版本
 
 #### 6. PowerShell 版本兼容性
 
