@@ -3,13 +3,20 @@
 [![npm version](https://badge.fury.io/js/gemini-mcp-tool-windows-fixed.svg)](https://badge.fury.io/js/gemini-mcp-tool-windows-fixed)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **最新版本 v1.0.3** - 添加了 PowerShell 路径参数支持，允许用户自定义 PowerShell 可执行文件路径
+> **最新版本 v1.0.4** - 修复了 brainstorm 工具错误，设置默认模型为 2.5 系列
 
 A **Windows-compatible** Model Context Protocol (MCP) server that enables AI assistants to interact with Google's Gemini CLI. This is a fixed version specifically designed to work seamlessly on Windows environments with PowerShell support.
 
 > **Note**: This is an enhanced version of the [original gemini-mcp-tool](https://github.com/jamubc/gemini-mcp-tool) with Windows-specific fixes and improvements.
 
-## 🆕 最新更新 (v1.0.3)
+## 🆕 最新更新 (v1.0.4)
+
+- 🔧 **修复 brainstorm 工具错误** - 解决了 `Cannot read properties of undefined` 错误
+- 🚀 **默认模型升级** - 现在默认使用 `gemini-2.5-pro` 模型，性能更佳
+- 🛡️ **增强错误处理** - 改进了参数验证和错误信息
+- ✅ **向后兼容** - 保持与现有配置的完全兼容性
+
+### v1.0.3 更新
 
 - 🆕 **PowerShell 路径参数支持** - 添加可选的 `powershellPath` 参数，允许用户自定义 PowerShell 可执行文件路径
 - ✅ **修复 PowerShell 执行错误** - 解决 `spawn powershell.exe ENOENT` 问题
@@ -57,7 +64,7 @@ This Windows-fixed version resolves:
 
 ```powershell
 # 使用最新版本 (推荐)
-npx gemini-mcp-tool-windows-fixed@1.0.3
+npx gemini-mcp-tool-windows-fixed@1.0.4
 
 # 或者使用最新版本标签
 npx -y gemini-mcp-tool-windows-fixed@latest
@@ -67,7 +74,7 @@ npx -y gemini-mcp-tool-windows-fixed@latest
 
 ```powershell
 # 安装最新版本
-npm install -g gemini-mcp-tool-windows-fixed@1.0.3
+npm install -g gemini-mcp-tool-windows-fixed@1.0.4
 
 # 运行工具
 gemini-mcp-tool-windows-fixed
@@ -90,7 +97,7 @@ npm install -g gemini-mcp-tool-windows-fixed@1.0.3
 
 ```bash
 # One-command setup for Claude Code
-claude mcp add gemini-cli -- npx -y gemini-mcp-tool-windows-fixed@1.0.3
+claude mcp add gemini-cli -- npx -y gemini-mcp-tool-windows-fixed@1.0.4
 ```
 
 **Verify Installation:**
@@ -120,7 +127,7 @@ If you already have it configured in Claude Desktop:
       "command": "npx",
       "args": [
         "-y",
-        "gemini-mcp-tool-windows-fixed@1.0.3"
+        "gemini-mcp-tool-windows-fixed@1.0.4"
       ],
       "env": {
         "GEMINI_API_KEY": "YOUR_ACTUAL_API_KEY_HERE"
@@ -142,7 +149,7 @@ If you already have it configured in Claude Desktop:
   "mcpServers": {
     "gemini-cli": {
       "command": "npx",
-      "args": ["-y", "gemini-mcp-tool-windows-fixed@1.0.3"],
+      "args": ["-y", "gemini-mcp-tool-windows-fixed@1.0.4"],
       "env": {
         "GEMINI_API_KEY": "YOUR_ACTUAL_API_KEY_HERE"
       }
