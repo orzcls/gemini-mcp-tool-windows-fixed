@@ -3,18 +3,19 @@
 [![npm version](https://badge.fury.io/js/gemini-mcp-tool-windows-fixed.svg)](https://badge.fury.io/js/gemini-mcp-tool-windows-fixed)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **最新版本 v1.0.4** - 修复了 brainstorm 工具错误，设置默认模型为 2.5 系列
+> **最新版本 v1.0.21** - 修复了跨终端兼容性问题和fetch-chunk格式错误
 
 A **Windows-compatible** Model Context Protocol (MCP) server that enables AI assistants to interact with Google's Gemini CLI. This is a fixed version specifically designed to work seamlessly on Windows environments with PowerShell support.
 
 > **Note**: This is an enhanced version of the [original gemini-mcp-tool](https://github.com/jamubc/gemini-mcp-tool) with Windows-specific fixes and improvements.
 
-## 🆕 最新更新 (v1.0.4)
+## 🆕 最新更新 (v1.0.21)
 
-- 🔧 **修复 brainstorm 工具错误** - 解决了 `Cannot read properties of undefined` 错误
-- 🚀 **默认模型升级** - 现在默认使用 `gemini-2.5-pro` 模型，性能更佳
-- 🛡️ **增强错误处理** - 改进了参数验证和错误信息
-- ✅ **向后兼容** - 保持与现有配置的完全兼容性
+- 🔧 **修复跨终端兼容性** - 解决了在不同终端环境中Node.js路径找不到的问题
+- 📦 **修复fetch-chunk格式错误** - 修复了分段响应的MCP协议格式不匹配问题
+- 🛡️ **增强PATH环境变量处理** - 自动添加常见Node.js安装路径
+- ✅ **完全兼容所有终端** - 支持PowerShell、CMD、VS Code终端、Trae AI等
+- 🚀 **改进错误处理** - 更好的错误信息和调试输出
 
 ### v1.0.3 更新
 
@@ -97,7 +98,7 @@ npm install -g gemini-mcp-tool-windows-fixed@1.0.3
 
 ```bash
 # One-command setup for Claude Code
-claude mcp add gemini-cli -- npx -y gemini-mcp-tool-windows-fixed@1.0.4
+claude mcp add gemini-cli -- npx -y gemini-mcp-tool-windows-fixed@1.0.21
 ```
 
 **Verify Installation:**
@@ -127,7 +128,7 @@ If you already have it configured in Claude Desktop:
       "command": "npx",
       "args": [
         "-y",
-        "gemini-mcp-tool-windows-fixed@1.0.4"
+        "gemini-mcp-tool-windows-fixed@1.0.21"
       ],
       "env": {
         "GEMINI_API_KEY": "YOUR_ACTUAL_API_KEY_HERE"
@@ -149,7 +150,7 @@ If you already have it configured in Claude Desktop:
   "mcpServers": {
     "gemini-cli": {
       "command": "npx",
-      "args": ["-y", "gemini-mcp-tool-windows-fixed@1.0.4"],
+      "args": ["-y", "gemini-mcp-tool-windows-fixed@1.0.21"],
       "env": {
         "GEMINI_API_KEY": "YOUR_ACTUAL_API_KEY_HERE"
       }
